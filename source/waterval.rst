@@ -5,6 +5,8 @@ Waterval
 
 In deze instructie gaan we een simpel Arduino circuit maken en gebruiken om een balletje in Processing te besturen.
 
+Bron: https://www.instructables.com/id/How-to-control-a-Processing-sketch-with-two-Arduin/
+
 Benodigdheden
 =============
 

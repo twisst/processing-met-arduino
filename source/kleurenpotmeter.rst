@@ -13,7 +13,10 @@ We zullen ook een LED-lampje aan- en uitzetten door met de muis op de schets in 
 Benodigdheden
 +++++++++++++
 
-Eerst zul je de programma's van Processing en Arduino moeten installeren. We noemen het programma van beide ook wel de ontwikkelomgeving of *IDE*. Als je die al op je computer hebt staan dan kun je deze stap overslaan.
+Eerst zul je de programma's van Processing en Arduino moeten installeren. We noemen het programma van beide ook wel de
+ontwikkelomgeving of *IDE*. Als je die al op je computer hebt staan dan kun je deze stap overslaan.
+
+
 
 Het Processing-programma kun je hier downloaden: https://processing.org/download/
 
