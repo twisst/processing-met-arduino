@@ -7,6 +7,7 @@ processing - Arduino
 
    introductie
    kleurenpotmeter
+   cirkelsenpotmeter
    waterval
    conclusie
    vervolg
