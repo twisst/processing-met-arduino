@@ -37,6 +37,7 @@ Nadat je beide programma's hebt geïnstalleerd, kun je beginnen met het maken va
 - een weerstand
 - een potmeter
 - draadjes
+- een LED-lampje
 
 We gebruiken hier een weerstand van 220 Ohm, met kleurcode rood-rood-bruin-goud, maar elke weerstand met een waarde ergens tussen 100 Ohm en 470 Ohm is prima.
 

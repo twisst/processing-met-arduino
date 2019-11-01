@@ -51,3 +51,52 @@ We gaan nu de lichtgevoelige weerstand aansluiten.
 
 Het zwarte draadje moet aan een van de aard aansluitingen (gnd) van de Arduino verbonden worden en de min-baan.
 Het rode draadje moet aan de 5V aansluiting van de Arduino en de plus-baan verbonden worden.
+
+4: schematisch overzicht
+------------------------
+
+.. image:: /imgs/stap4.jpg
+
+Voor als je vast was komen te zitten!
+
+5: open de Arduino IDE
+----------------------
+
+.. image:: /imgs/stap5.jpg
+
+Download de :download:`Arduino code<_static/ArduinoCode.zip>` en pak deze uit.
+Open bestand `2_Inputs/_2_Inputs.ino` in de Arduino IDE.
+
+6: controleer het bestand en je verbindingen
+--------------------------------------------
+
+.. image:: /imgs/stap6.jpg
+
+Controleer dat je computer verbonden is met de USB poort van de Arduino.
+
+Open de Serial Monitor om te controleren dat de verbinding met de Arduino goed is opgezet. Je zou een lijst met
+2 getalletjes tussen 0 en 255 voorbij moeten zien komen. Draai aan de potmeter of bedek de lichtgevoelige weerstand om
+te zien of de getalletjes veranderen.
+
+7: open de Processing IDE
+-------------------------
+
+.. image:: /imgs/stap7.jpg
+
+We zijn bijna klaar...
+
+Laad het Processing script met naam `Waterfall_with_Arduino_Controls/Waterfall_with_Arduino_Controls.pde`.
+
+Druk op de speelknop in de linker bovenhoek van de Processing IDE en je zou een bal op het scherm naar beneden moeten
+zien bewegen.
+
+8: veel plezier!
+----------------
+
+.. image:: /imgs/stap8.jpg
+
+Je kunt nu het Processing script besturen met de twee externe ingangen op de Arduino: de lichtgevoelige weerstand en
+de potmeter.
+
+Probeer eens wat waarden in het Processing script aan te passen of wissel tussen de weerstand en de potmeter. Het hele
+idee is om creatief te zijn en je computer eens op een andere manier te bedienen dan met een toetsenbord of muis.
