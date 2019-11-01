@@ -22,8 +22,8 @@ Wat heb je nodig?
 Stappen
 =======
 
-Stap 1: de potmeter verbinden met het insteekbord
--------------------------------------------------
+1: de potmeter verbinden met het insteekbord
+--------------------------------------------
 
 .. image:: /imgs/stap1.jpg
 
@@ -33,8 +33,8 @@ met de plus- en min-banen.
 Het derde draadje, in het midden op de potmeter, stuurt informatie over de stand van de potmeter naar de Arduino en
 moet aan poort A1 (analog A1) worden aangesloten.
 
-Stap 2: de lichtgevoelige weerstand aansluiten
-----------------------------------------------
+2: de lichtgevoelige weerstand aansluiten
+-----------------------------------------
 
 .. image:: /imgs/stap2.jpg
 
@@ -44,8 +44,8 @@ We gaan nu de lichtgevoelige weerstand aansluiten.
  2. verbind de het draadje van de weerstand met die van de lichtgevoelige weerstand en met poort A0 (analog A0) op het Arduino bordje
  3. verbind het draadje aan de andere kant van de lichtgevoelige weerstand met de min-baan
 
-Stap 3: de voeding aansluiten
------------------------------
+3: de voeding aansluiten
+------------------------
 
 .. image:: /imgs/stap3.jpg
 

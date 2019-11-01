@@ -6,6 +6,7 @@ processing - Arduino
    :caption: Inhoud:
 
    introductie
+   kleurenpotmeter
    waterval
    conclusie
    vervolg
