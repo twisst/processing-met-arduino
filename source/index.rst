@@ -1,4 +1,4 @@
-instructie template
+processing - waterval
 ==============================================
 
 .. toctree::
@@ -7,8 +7,7 @@ instructie template
 
    introductie
    benodigdheden
-   templategebruiken
-   templateaanpassen
+   stappen
    conclusie
    vervolg
    licentie

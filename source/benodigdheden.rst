@@ -1,19 +1,13 @@
 Benodigdheden
 =============
 
-Voor het gebruik van deze template moeten de volgende programma's geïnstalleerd zijn:
+.. image:: /imgs/banner.jpg
 
- - Python 2.7/3.6
- - Sphinx
- - sphinx-rtd-theme
+Wat heb je nodig?
 
-Installatie onder Ubuntu:
-
-.. code-block:: bash
-
-   apt install python3 python3-pip
-   git clone https://github.com/coderdojonijmegen/instructie_template.git
-   cd instructie_template
-   pip3 install -r requirements.txt
-
-Intellij ondersteunt color-coding en code-completion voor reStructuredText middels een plugin.
+ * 1 x Arduino bordje (de instructie gaat uit van een Uno)
+ * 1 x insteek bordje
+ * 1 x lichtgevoelige weerstand
+ * 1 x 10kOhm weerstand (kleurcode bruin-zwart-oranje)
+ * 1 x potmeter
+ * handje vol insteek draadjes
