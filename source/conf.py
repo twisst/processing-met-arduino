@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 
-project = 'processing - waterval'
+project = 'processing - Arduino'
 
 from datetime import datetime
 current_year = datetime.now().year

@@ -1,4 +1,4 @@
-processing - waterval
+processing - Arduino
 ==============================================
 
 .. toctree::
@@ -6,8 +6,7 @@ processing - waterval
    :caption: Inhoud:
 
    introductie
-   benodigdheden
-   stappen
+   waterval
    conclusie
    vervolg
    licentie
