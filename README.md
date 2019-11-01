@@ -1,6 +1,6 @@
-# Instructie template
+# Processing en Arduino
 
-Dit archief bevat instructies voor het gebruik van de instructie template. 
+Dit archief bevat instructies voor het maken van interactieve kunst in Processing met aansturing vanuit Arduino. 
 
-De pagina's zijn zichtbaar via [https://coderdojonijmegen.github.io/instructie_template/](https://coderdojonijmegen.github.io/instructie_template/).
+De pagina's zijn zichtbaar via [https://coderdojonijmegen.github.io/processing-met-arduino/](https://coderdojonijmegen.github.io/processing-met-arduino/).
 
