@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="nl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="nl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Kleur en potmeter &mdash; processing - Arduino  documentatie</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/coderdojo.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Cirkels en potmeter" href="cirkelsenpotmeter.html" />
+    <link rel="prev" title="Introductie" href="introductie.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> processing - Arduino
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Inhoud:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introductie.html">Introductie</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Kleur en potmeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#benodigdheden">Benodigdheden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stappen">Stappen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#maak-de-schakeling-op-het-breadboard">1. Maak de schakeling op het breadboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-voor-op-de-arduino">2. Code voor op de Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-voor-in-processing">3. Code voor in Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-laten-praten-met-de-arduino">4. Processing laten praten met de Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#draaien-maar">5. Draaien maar!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kleur-veranderen">6. Kleur veranderen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cirkelsenpotmeter.html">Cirkels en potmeter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waterval.html">Waterval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vervolg.html">Vervolg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licentie.html">Licentie</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">processing - Arduino</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Kleur en potmeter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/kleurenpotmeter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kleur-en-potmeter">
+<h1>Kleur en potmeter<a class="headerlink" href="#kleur-en-potmeter" title="Permalink naar deze titel">¶</a></h1>
+<img alt="_images/arduinoprocessing1.jpeg" src="_images/arduinoprocessing1.jpeg" />
+<p>Om te beginnen gaan we de kleur van een schets in Processing veranderen met een potentiometer. Een potentiometer is een draaiknop. Met een Arduino kun je de stand van de knop uitlezen en die waarde doorsturen naar de computer.</p>
+<p>We zullen ook een LED-lampje aan- en uitzetten door met de muis op de schets in Processing te klikken.</p>
+<p>(Bron: <a class="reference external" href="https://maker.pro/arduino/tutorial/how-to-make-arduino-and-processing-ide-communicate">https://maker.pro/arduino/tutorial/how-to-make-arduino-and-processing-ide-communicate</a> )</p>
+<div class="section" id="benodigdheden">
+<h2>Benodigdheden<a class="headerlink" href="#benodigdheden" title="Permalink naar deze titel">¶</a></h2>
+<p>Eerst zul je de programma’s van Processing en Arduino moeten installeren. We noemen het programma van beide ook wel de
+ontwikkelomgeving of <em>IDE</em>. Als je die al op je computer hebt staan dan kun je deze stap overslaan.</p>
+<p>Het Processing-programma kun je hier downloaden: <a class="reference external" href="https://processing.org/download/">https://processing.org/download/</a></p>
+<p>De Arduino-software kun je hier downloaden: <a class="reference external" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>
+Onder het kopje ‘Download the Arduino IDE’ kun je het bestand voor jouw computer uitkiezen.</p>
+<p>Als je ze hebt geïnstalleerd, kun je beide programma’s openen. Processing ziet er zo uit:</p>
+<img alt="_images/arduinoprocessing2.png" src="_images/arduinoprocessing2.png" />
+</div>
+<div class="section" id="stappen">
+<h2>Stappen<a class="headerlink" href="#stappen" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="maak-de-schakeling-op-het-breadboard">
+<h3>1. Maak de schakeling op het breadboard<a class="headerlink" href="#maak-de-schakeling-op-het-breadboard" title="Permalink naar deze titel">¶</a></h3>
+<p>Nadat je beide programma’s hebt geïnstalleerd, kun je beginnen met het maken van de schakeling. Dit zijn de onderdelen die je nu nodig hebt:</p>
+<ul class="simple">
+<li><p>de Arduino</p></li>
+<li><p>een breadboard</p></li>
+<li><p>een weerstand</p></li>
+<li><p>een potmeter</p></li>
+<li><p>draadjes</p></li>
+<li><p>een LED-lampje</p></li>
+</ul>
+<p>We gebruiken hier een weerstand van 220 Ohm, met kleurcode rood-rood-bruin-goud, maar elke weerstand met een waarde ergens tussen 100 Ohm en 470 Ohm is prima.</p>
+<p>Maak met die componenten de schakeling zoals in dit plaatje:</p>
+<img alt="_images/arduinoprocessing3.png" src="_images/arduinoprocessing3.png" />
+<p>Het plaatje laat een wit breadboard zien dat bovenop de Arduino ligt. Dat hoeft er bij jou niet net zo uit te zien: misschien heb je een groter breadboard, en dat breadboard mag ook naast de Arduino liggen.</p>
+<p>Wat wel precies moet kloppen om het te laten werken, zijn de verbindingen tussen de verschillende onderdelen. Let erop dat de onderdelen alleen met elkaar verbonden zijn als hun pinnetjes in hetzelde rijtje staan, dus zoals op het plaatje.</p>
+<p>Verbind de twee buitenste pinnen van de potentiometer met de 5V-pin en de GND-pin van de Arduino. De middelste pin van de potentiometer verbind je met de pin waar A0 bij staat op de Arduino.</p>
+<p>Verbind dan het langste pootje van de LED met pin 7 op de Arduino en het korte pootje met de GND-pin via de weerstand.</p>
+</div>
+<div class="section" id="code-voor-op-de-arduino">
+<h3>2. Code voor op de Arduino<a class="headerlink" href="#code-voor-op-de-arduino" title="Permalink naar deze titel">¶</a></h3>
+<p>Hieronder zie je de code voor op de Arduino. Als je een beetje Engels kunt, dan kun je het commentaar in de code lezen om te zien wat elk stukje doet.</p>
+<p>Kopiëer deze code en zet hem in het venster van de Arduino IDE (maak dat scherm eerst leeg voordat je de code erin plakt).:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">led_pin</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>    <span class="o">//</span> <span class="n">Initializing</span> <span class="n">the</span> <span class="n">LED</span> <span class="n">pin</span>
+<span class="nb">int</span> <span class="n">pot_pin</span> <span class="o">=</span> <span class="n">A0</span><span class="p">;</span>   <span class="o">//</span> <span class="n">Initializing</span> <span class="n">the</span> <span class="n">Potentiometer</span> <span class="n">pin</span>
+<span class="nb">int</span> <span class="n">pot_output</span><span class="p">;</span>     <span class="o">//</span> <span class="n">Declaring</span> <span class="n">a</span> <span class="n">variable</span> <span class="k">for</span> <span class="n">potentiometer</span> <span class="n">output</span>
+
+<span class="n">void</span> <span class="n">setup</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">pinMode</span><span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span> <span class="o">//</span> <span class="n">Declaring</span> <span class="n">the</span> <span class="n">LED</span> <span class="n">pin</span> <span class="k">as</span> <span class="n">output</span> <span class="n">pin</span>
+    <span class="n">Serial</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>       <span class="o">//</span> <span class="n">Starting</span> <span class="n">the</span> <span class="n">serial</span> <span class="n">communication</span> <span class="n">at</span> <span class="mi">9600</span> <span class="n">baud</span> <span class="n">rate</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">loop</span> <span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="n">pot_output</span> <span class="o">=</span> <span class="n">analogRead</span> <span class="p">(</span><span class="n">pot_pin</span><span class="p">);</span> <span class="o">//</span> <span class="n">Reading</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">potentiometer</span>
+    <span class="nb">int</span> <span class="n">mapped_output</span> <span class="o">=</span> <span class="nb">map</span> <span class="p">(</span><span class="n">pot_output</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1023</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span> <span class="o">//</span> <span class="n">Mapping</span> <span class="n">the</span> <span class="n">output</span> <span class="n">of</span> <span class="n">potentiometer</span> <span class="n">to</span> <span class="mi">0</span><span class="o">-</span><span class="mi">255</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span> <span class="n">by</span> <span class="n">the</span> <span class="n">Processing</span> <span class="n">IDE</span>
+    <span class="n">Serial</span><span class="o">.</span><span class="n">println</span> <span class="p">(</span><span class="n">mapped_output</span><span class="p">);</span>     <span class="o">//</span> <span class="n">Sending</span> <span class="n">the</span> <span class="n">output</span> <span class="n">to</span> <span class="n">Processing</span> <span class="n">IDE</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span><span class="o">.</span><span class="n">available</span> <span class="p">(</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>   <span class="o">//</span> <span class="n">Checking</span> <span class="k">if</span> <span class="n">the</span> <span class="n">Processing</span> <span class="n">IDE</span> <span class="n">has</span> <span class="n">send</span> <span class="n">a</span> <span class="n">value</span> <span class="ow">or</span> <span class="ow">not</span>
+        <span class="n">char</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Serial</span><span class="o">.</span><span class="n">read</span> <span class="p">(</span> <span class="p">);</span>    <span class="o">//</span> <span class="n">Reading</span> <span class="n">the</span> <span class="n">data</span> <span class="n">received</span> <span class="ow">and</span> <span class="n">saving</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">state</span> <span class="n">variable</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="p">{</span>            <span class="o">//</span> <span class="n">If</span> <span class="n">received</span> <span class="n">data</span> <span class="ow">is</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">then</span> <span class="n">turn</span> <span class="n">on</span> <span class="n">LED</span>
+            <span class="n">digitalWrite</span> <span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="p">{</span>     <span class="o">//</span> <span class="n">If</span> <span class="n">received</span> <span class="n">data</span> <span class="ow">is</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">then</span> <span class="n">turn</span> <span class="n">off</span> <span class="n">led</span>
+            <span class="n">digitalWrite</span> <span class="p">(</span><span class="n">led_pin</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Verbind vervolgens de Arduino met de USB-kabel aan je computer, en klik dan op de upload-knop in de IDE (tweede icoon van links).</p>
+<p>Als je een foutmelding krijgt omdat de computer niet kan vinden, dan moet je in het menu ‘Hulpmiddelen’ zorgen dat het juiste bord en de juiste poort zijn geselecteerd. Het bord dat je gebruikt is waarschijnlijk ‘Arduino/Genuino Uno’ en de poort zou óf iets moeten zijn als COM3 of /dev/cu.wchusbserialfd120 (iets met ‘usb’ erin).</p>
+</div>
+<div class="section" id="code-voor-in-processing">
+<h3>3. Code voor in Processing<a class="headerlink" href="#code-voor-in-processing" title="Permalink naar deze titel">¶</a></h3>
+<p>Het Processing-programma zal de gegevens van de Arduino opvangen uit de seriële verbinding via de USB-poort. De code hieronder zorgt ervoor dat de kleur van het Processing-venster zal veranderen op basis van die gegevens.
+Deze code stuurt ook een 1 of 2 als je met de linker- of rechtermuisknop op het venster klikt.</p>
+<p>Kopiëer deze code en zet hem in Processing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing.serial.</span><span class="o">*</span><span class="p">;</span>    <span class="o">//</span> <span class="n">Importing</span> <span class="n">the</span> <span class="n">serial</span> <span class="n">library</span> <span class="n">to</span> <span class="n">communicate</span> <span class="k">with</span> <span class="n">the</span> <span class="n">Arduino</span>
+
+<span class="n">Serial</span> <span class="n">myPort</span><span class="p">;</span>      <span class="o">//</span> <span class="n">Initializing</span> <span class="n">a</span> <span class="n">vairable</span> <span class="n">named</span> <span class="s1">&#39;myPort&#39;</span> <span class="k">for</span> <span class="n">serial</span> <span class="n">communication</span>
+<span class="nb">float</span> <span class="n">background_color</span> <span class="p">;</span>   <span class="o">//</span> <span class="n">Variable</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">the</span> <span class="n">background</span> <span class="n">color</span>
+
+<span class="n">void</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">size</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span>  <span class="mi">500</span><span class="p">);</span>     <span class="o">//</span> <span class="n">Size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">serial</span> <span class="n">window</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">increase</span> <span class="ow">or</span> <span class="n">decrease</span> <span class="k">as</span> <span class="n">you</span> <span class="n">want</span>
+        <span class="n">myPort</span>  <span class="o">=</span>  <span class="n">new</span> <span class="n">Serial</span> <span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="s2">&quot;COM3&quot;</span><span class="p">,</span>  <span class="mi">9600</span><span class="p">);</span> <span class="o">//</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">com</span> <span class="n">port</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">baud</span> <span class="n">rate</span> <span class="n">according</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Arduino</span> <span class="n">IDE</span>
+        <span class="n">myPort</span><span class="o">.</span><span class="n">bufferUntil</span> <span class="p">(</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">);</span>   <span class="o">//</span> <span class="n">Receiving</span> <span class="n">the</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">Arduino</span> <span class="n">IDE</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">serialEvent</span>  <span class="p">(</span><span class="n">Serial</span> <span class="n">myPort</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">background_color</span>  <span class="o">=</span>  <span class="nb">float</span> <span class="p">(</span><span class="n">myPort</span><span class="o">.</span><span class="n">readStringUntil</span> <span class="p">(</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="p">;</span>  <span class="o">//</span> <span class="n">Changing</span> <span class="n">the</span> <span class="n">background</span> <span class="n">color</span> <span class="n">according</span> <span class="n">to</span> <span class="n">received</span> <span class="n">data</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">draw</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">background</span> <span class="p">(</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">background_color</span> <span class="p">);</span>   <span class="o">//</span> <span class="n">Initial</span> <span class="n">background</span> <span class="n">color</span><span class="p">,</span> <span class="n">when</span> <span class="n">we</span> <span class="n">will</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">serial</span> <span class="n">window</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="n">mousePressed</span>  <span class="o">&amp;&amp;</span>  <span class="p">(</span> <span class="n">mouseButton</span>  <span class="o">==</span>  <span class="n">LEFT</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="k">if</span> <span class="n">the</span> <span class="n">left</span> <span class="n">mouse</span> <span class="n">button</span> <span class="ow">is</span> <span class="n">pressed</span>
+                <span class="n">myPort</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span> <span class="s1">&#39;1&#39;</span> <span class="p">)</span> <span class="p">;</span>       <span class="o">//</span> <span class="n">send</span> <span class="n">a</span> <span class="s1">&#39;1&#39;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Arduino</span> <span class="n">IDE</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="n">mousePressed</span>  <span class="o">&amp;&amp;</span>  <span class="p">(</span> <span class="n">mouseButton</span> <span class="o">==</span> <span class="n">RIGHT</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>  <span class="o">//</span> <span class="k">if</span> <span class="n">the</span> <span class="n">right</span> <span class="n">mouse</span> <span class="n">button</span> <span class="ow">is</span> <span class="n">pressed</span>
+                <span class="n">myPort</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span> <span class="s1">&#39;0&#39;</span> <span class="p">)</span> <span class="p">;</span>     <span class="o">//</span> <span class="n">Send</span> <span class="n">a</span> <span class="s1">&#39;0&#39;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Arduino</span> <span class="n">IDE</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="processing-laten-praten-met-de-arduino">
+<h3>4. Processing laten praten met de Arduino<a class="headerlink" href="#processing-laten-praten-met-de-arduino" title="Permalink naar deze titel">¶</a></h3>
+<p>De Processing-software kan communiceren met de Arduino via een seriële verbinding. Zo kunnen we dus informatie van de Arduino naar Processing sturen en andersom.</p>
+<p>Om te kunnen praten met het Arduino-bordje, zal Processing moeten weten op welke poort van je computer de Arduino is aangesloten. Het kan zijn dat de code meteen werkt, maar misschien moet je in de code iets moeten veranderen om het te laten werken.</p>
+<p>In de Arduino IDE zie je rechtsonderin het venster op welke poort het Arduino-bordje is aangesloten. Dat adres vul je in in het script in het Processing-venster.</p>
+<p>Dit is hoe de regel er ongeveer uit zou zien op een Apple-computer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myPort</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Serial</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="s2">&quot;/dev/cu.wchusbserialfd120&quot;</span><span class="p">,</span> <span class="mi">9600</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>En zo op een PC:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myPort</span>  <span class="o">=</span>  <span class="n">new</span> <span class="n">Serial</span> <span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="s2">&quot;COM3&quot;</span><span class="p">,</span>  <span class="mi">9600</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="draaien-maar">
+<h3>5. Draaien maar!<a class="headerlink" href="#draaien-maar" title="Permalink naar deze titel">¶</a></h3>
+<p>Als je de code op de Arduino hebt gezet, dan kun je nu Processing met de Arduino laten praten.</p>
+<p>Start het Processing-script door op de ‘Play’-knop te klikken:</p>
+<img alt="_images/arduinoprocessing4.png" src="_images/arduinoprocessing4.png" />
+<p>Als het goed is, zie je nu een venster dat je van kleur kunt laten veranderen door aan de potentiometer te draaien. De Arduino stuurt een waarde tussen 0 and 255 naar de Processing IDE. De Processing IDE verandert de kleur die je ziet op basis van die waarde.</p>
+<p>Probeer ook maar eens om met de linker- en rechtermuisknop op het venster te kliken. Als je alles goed hebt aangesloten, zal het LEDje aan of uitgaan.</p>
+</div>
+<div class="section" id="kleur-veranderen">
+<h3>6. Kleur veranderen<a class="headerlink" href="#kleur-veranderen" title="Permalink naar deze titel">¶</a></h3>
+<p>Dit is de regel waarmee Processing de kleur van het venster verandert:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">background</span> <span class="p">(</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">background_color</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>De functie background() heeft drie getallen nodig: een getal voor hoeveel rood je ziet, hoeveel groen en hoeveel blauw.
+Nu werkt het zo dat alleen blauw verandert als je aan de knop draait. Hoe ziet het eruit als je álle kleuren afhankelijk maakt van de knop?</p>
+<p>Kun jij die regel zo veranderen dat je andere kleuren ziet?</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cirkelsenpotmeter.html" class="btn btn-neutral float-right" title="Cirkels en potmeter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introductie.html" class="btn btn-neutral float-left" title="Introductie" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CoderDojo Nijmegen
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    // https://stackoverflow.com/a/25543713/134731 for toggle example
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+<script src="_static/scratchblocks-v3.4-min.js"></script>
+<script src="_static/translations-all-v3.4.js" charset="utf8"></script>
+
+<script>
+  function parseBlocks(codeBlock) {
+    var doc
+    var docView
+    var svg
+    // Parse the source code
+    doc = scratchblocks.parse(codeBlock.innerHTML, {languages: ['en','nl']})
+
+    // // Create a DocView with your chosen style
+    docView = scratchblocks.newView(doc, {
+      style: 'scratch3', // Or 'scratch2'
+    })
+
+    // Render to an SVG
+    svg = docView.render()
+
+    // Scratch 3 is zoomed out by default, so you probably want to do the same
+    svg.style.transform = 'scale(0.675)';
+
+    // Add that SVG to your page, etc
+    svg.style.transformOrigin = '0 0';
+    return svg
+  }
+  var codeblocks = document.getElementsByClassName("scratch")
+  var parsedBlock
+  for (i = 0; i < codeblocks.length; i++) {
+    parsedBlock = parseBlocks(codeblocks[i])
+    codeblocks[i].innerHTML = ""
+    codeblocks[i].appendChild(parsedBlock)
+  }
+
+</script>
+
+
+</body>
+</html>

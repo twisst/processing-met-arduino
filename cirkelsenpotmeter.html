@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="nl" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="nl" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cirkels en potmeter &mdash; processing - Arduino  documentatie</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/coderdojo.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Waterval" href="waterval.html" />
+    <link rel="prev" title="Kleur en potmeter" href="kleurenpotmeter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> processing - Arduino
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Inhoud:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introductie.html">Introductie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kleurenpotmeter.html">Kleur en potmeter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cirkels en potmeter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stappen">Stappen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schakeling-op-het-breadboard">1. Schakeling op het breadboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zien-wat-er-gebeurt">2. Zien wat er gebeurt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-voor-in-processing">3. Code voor in Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cirkels-tekenen">4. Cirkels tekenen!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#de-grootte-van-het-venster-veranderen">5. De grootte van het venster veranderen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="waterval.html">Waterval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vervolg.html">Vervolg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licentie.html">Licentie</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">processing - Arduino</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Cirkels en potmeter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cirkelsenpotmeter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cirkels-en-potmeter">
+<h1>Cirkels en potmeter<a class="headerlink" href="#cirkels-en-potmeter" title="Permalink naar deze titel">¶</a></h1>
+<p>Nu je weet hoe je Processing met de Arduino kunt laten communiceren, kun je van alles gaan tekenen met sensoren. We houden het nog even bij de potentiometer, maar nu gaan we een cirkel tekenen.</p>
+<img alt="_images/arduinoprocessing7.jpg" src="_images/arduinoprocessing7.jpg" />
+<p>(bron: <a class="reference external" href="http://talyell.in/arduino-potentiometer-processing/">http://talyell.in/arduino-potentiometer-processing/</a> )</p>
+<div class="section" id="stappen">
+<h2>Stappen<a class="headerlink" href="#stappen" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="schakeling-op-het-breadboard">
+<h3>1. Schakeling op het breadboard<a class="headerlink" href="#schakeling-op-het-breadboard" title="Permalink naar deze titel">¶</a></h3>
+<p>Je kunt voor dit project dezelfde schakeling gebruiken als bij het vorige project. We gebruiken nu alleen de potmeter, dus niet de LED.</p>
+<img alt="_images/arduinoprocessing5.png" src="_images/arduinoprocessing5.png" />
+</div>
+<div class="section" id="zien-wat-er-gebeurt">
+<h3>2. Zien wat er gebeurt<a class="headerlink" href="#zien-wat-er-gebeurt" title="Permalink naar deze titel">¶</a></h3>
+<p>De functie Serial.println() schrijft de waardes naar de computer. Je kunt dat zien gebeuren in het zwarte venster onderaan in de Processing IDE. Dat venster is vaak erg handig als je bezig bent iets te maken en wilt zien of er wel data verstuurd wordt.</p>
+<p>In de Arduino IDE kun je die data ook zien, al kan dat niet tegelijk met Processing. Als je in Processing even op de stop-knop drukt, dan kun je daarna in Arduino de seriële monitor openen, met de knop rechtsbovenin:</p>
+<img alt="_images/arduinoprocessing8.jpg" src="_images/arduinoprocessing8.jpg" />
+<p>In Arduino zit ook een ingebouwde seriële plotter, en dat is nog leuker. Met de plotter kun je een grafiek zien van de waarden die je binnenkrijgt. Sluit daarvoor eerst het venster van de seriële monitor, ga dan naar het menu ‘Hulpmiddelen’ en kies ‘Seriële Plotter’. Als je nu aan de knop draait, zie je de grafiek ontstaan.</p>
+</div>
+<div class="section" id="code-voor-in-processing">
+<h3>3. Code voor in Processing<a class="headerlink" href="#code-voor-in-processing" title="Permalink naar deze titel">¶</a></h3>
+<p>We kunnen de code in de Arduino hetzelfde laten, maar in Processing gaan nu iets anders tekenen. Kopëer deze code, plak hem in Processing en start het script met de start-knop:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing.serial.</span><span class="o">*</span><span class="p">;</span>    <span class="o">//</span> <span class="n">Importing</span> <span class="n">the</span> <span class="n">serial</span> <span class="n">library</span> <span class="n">to</span> <span class="n">communicate</span> <span class="k">with</span> <span class="n">the</span> <span class="n">Arduino</span>
+
+<span class="n">Serial</span> <span class="n">myPort</span><span class="p">;</span>      <span class="o">//</span> <span class="n">Initializing</span> <span class="n">a</span> <span class="n">vairable</span> <span class="n">named</span> <span class="s1">&#39;myPort&#39;</span> <span class="k">for</span> <span class="n">serial</span> <span class="n">communication</span>
+<span class="nb">float</span> <span class="n">kleur</span> <span class="p">;</span>   <span class="o">//</span> <span class="n">Variable</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">the</span> <span class="n">background</span> <span class="n">color</span>
+<span class="nb">float</span> <span class="n">m</span><span class="p">;</span>
+<span class="nb">int</span> <span class="n">padding</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="n">void</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">size</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span>  <span class="mi">500</span><span class="p">);</span>     <span class="o">//</span> <span class="n">Size</span> <span class="n">of</span> <span class="n">the</span> <span class="n">serial</span> <span class="n">window</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">increase</span> <span class="ow">or</span> <span class="n">decrease</span> <span class="k">as</span> <span class="n">you</span> <span class="n">want</span>
+        <span class="n">myPort</span>  <span class="o">=</span>  <span class="n">new</span> <span class="n">Serial</span> <span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="s2">&quot;/dev/cu.usbmodemFD121&quot;</span><span class="p">,</span>  <span class="mi">9600</span><span class="p">);</span> <span class="o">//</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">com</span> <span class="n">port</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">baud</span> <span class="n">rate</span> <span class="n">according</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Arduino</span> <span class="n">IDE</span>
+        <span class="n">myPort</span><span class="o">.</span><span class="n">bufferUntil</span> <span class="p">(</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">);</span>   <span class="o">//</span> <span class="n">Receiving</span> <span class="n">the</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">Arduino</span> <span class="n">IDE</span>
+
+        <span class="n">smooth</span><span class="p">();</span>
+        <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">serialEvent</span>  <span class="p">(</span><span class="n">Serial</span> <span class="n">myPort</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">kleur</span>  <span class="o">=</span>  <span class="nb">float</span> <span class="p">(</span><span class="n">myPort</span><span class="o">.</span><span class="n">readStringUntil</span> <span class="p">(</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span> <span class="p">)</span> <span class="p">;</span>  <span class="o">//</span> <span class="n">Changing</span> <span class="n">the</span> <span class="n">background</span> <span class="n">color</span> <span class="n">according</span> <span class="n">to</span> <span class="n">received</span> <span class="n">data</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">kleur</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">padding</span><span class="p">,</span> <span class="n">width</span><span class="o">-</span><span class="n">padding</span><span class="p">);</span>
+        <span class="n">println</span><span class="p">(</span><span class="n">kleur</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">void</span> <span class="n">draw</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">background</span><span class="p">(</span><span class="c1">#FFFFF0);</span>
+
+        <span class="n">line</span><span class="p">(</span><span class="n">padding</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">-</span><span class="n">padding</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">noStroke</span><span class="p">();</span>
+        <span class="n">fill</span><span class="p">(</span><span class="c1">#FFDE14);</span>
+        <span class="n">ellipse</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">);</span>
+        <span class="n">stroke</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cirkels-tekenen">
+<h3>4. Cirkels tekenen!<a class="headerlink" href="#cirkels-tekenen" title="Permalink naar deze titel">¶</a></h3>
+<p>Het resultaat zou er zo uit moeten zien:</p>
+<img alt="_images/arduinoprocessing6.jpeg" src="_images/arduinoprocessing6.jpeg" />
+<p>Als je nu aan de potentiometer draait, dan zou je de gele cirkel moeten zien bewegen op je scherm.</p>
+<p>Kun je eens kijken wat je allemaal aan het script in Processing kunt veranderen om het er anders uit te laten zien? Kun je de kleur mee laten veranderen? (Je zou daar in dit geval de functie fill() voor nodig hebben in plaats van background().)</p>
+<p>Je kunt ook de grootte van de cirkel in het venster aanpassen (zie daarvoor de Coderdojo-handleiding over Processing, op de pagina met het kopje ‘Animatie’). Kun je de cirkel ook platter of ronder maken als je aan de potmeter draait? En kun je er meer cirkels laten verschijnen?</p>
+</div>
+<div class="section" id="de-grootte-van-het-venster-veranderen">
+<h3>5. De grootte van het venster veranderen<a class="headerlink" href="#de-grootte-van-het-venster-veranderen" title="Permalink naar deze titel">¶</a></h3>
+<p>De functie size() bepaalt de grootte van het venster. Als je size() helemaal weglaat, wordt een standaardformaat gebruikt van 100 bij 100 pixels.</p>
+<p>Probeer het venster maar eens wat groter of kleiner te maken door andere getallen in te vullen voor de breedte en hoogte in pixels.
+Kun je het venster ook beeldvullend maken?</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="waterval.html" class="btn btn-neutral float-right" title="Waterval" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kleurenpotmeter.html" class="btn btn-neutral float-left" title="Kleur en potmeter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, CoderDojo Nijmegen
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    // https://stackoverflow.com/a/25543713/134731 for toggle example
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+<script src="_static/scratchblocks-v3.4-min.js"></script>
+<script src="_static/translations-all-v3.4.js" charset="utf8"></script>
+
+<script>
+  function parseBlocks(codeBlock) {
+    var doc
+    var docView
+    var svg
+    // Parse the source code
+    doc = scratchblocks.parse(codeBlock.innerHTML, {languages: ['en','nl']})
+
+    // // Create a DocView with your chosen style
+    docView = scratchblocks.newView(doc, {
+      style: 'scratch3', // Or 'scratch2'
+    })
+
+    // Render to an SVG
+    svg = docView.render()
+
+    // Scratch 3 is zoomed out by default, so you probably want to do the same
+    svg.style.transform = 'scale(0.675)';
+
+    // Add that SVG to your page, etc
+    svg.style.transformOrigin = '0 0';
+    return svg
+  }
+  var codeblocks = document.getElementsByClassName("scratch")
+  var parsedBlock
+  for (i = 0; i < codeblocks.length; i++) {
+    parsedBlock = parseBlocks(codeblocks[i])
+    codeblocks[i].innerHTML = ""
+    codeblocks[i].appendChild(parsedBlock)
+  }
+
+</script>
+
+
+</body>
+</html>
