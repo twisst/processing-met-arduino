@@ -9,6 +9,5 @@ processing - Arduino
    kleurenpotmeter
    cirkelsenpotmeter
    waterval
-   conclusie
    vervolg
    licentie

@@ -72,7 +72,7 @@ We kunnen de code in de Arduino hetzelfde laten, maar in Processing gaan nu iets
 
 Het resultaat zou er zo uit moeten zien:
 
-.. image:: imgs/arduinoprocessing6.png
+.. image:: imgs/arduinoprocessing6.jpeg
 
 Als je nu aan de potentiometer draait, dan zou je de gele cirkel moeten zien bewegen op je scherm. 
 
