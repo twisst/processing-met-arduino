@@ -106,40 +106,21 @@ Deze code stuurt ook een 1 of 2 als je met de linker- of rechtermuisknop op het 
 
 Kopiëer deze code en zet hem in Processing::
 
-    import processing.serial.*;    // Importing the serial library to communicate with the Arduino
+	import processing.serial.*;    // Importing the serial library to communicate with the Arduino 
 
-    Serial myPort;      // Initializing a vairable named 'myPort' for serial communication
-    float kleur ;   // Variable for changing the background color
-    float m;
-    int padding = 100;
+	Serial myPort;      // Initializing a vairable named 'myPort' for serial communication
+	float background_color ;   // Variable for changing the background color
 
-    void setup() {
-        size (500,  500);     // Size of the serial window, you can increase or decrease as you want
-        myPort  =  new Serial (this, "/dev/cu.usbmodemFD121",  9600); // Set the com port and the baud rate according to the Arduino IDE
-        myPort.bufferUntil ( '\n' );   // Receiving the data from the Arduino IDE
+	void setup() {
+		size (500,  500);     // Size of the serial window, you can increase or decrease as you want
+		myPort  =  new Serial (this, "COM3",  9600); // Set the com port and the baud rate according to the Arduino IDE
+		myPort.bufferUntil ( '\n' );   // Receiving the data from the Arduino IDE
+	} 
 
-        smooth();
-        strokeWeight(3);
-        stroke(100);
-
-    }
-
-    void serialEvent  (Serial myPort) {
-        kleur  =  float (myPort.readStringUntil ( '\n' ) ) ;  // Changing the background color according to received data
-        m = map(kleur, 255, 0, padding, width-padding);
-        println(kleur);
-    }
-
-    void draw() {
-        background(#FFFFF0);
-
-        line(padding, height/2, width-padding, height/2);
-        noStroke();
-        fill(#FFDE14);
-        ellipse(m, height/2, 150, 150);
-        stroke(100);
-    }
-
+	void serialEvent  (Serial myPort) {
+		background_color  =  float (myPort.readStringUntil ( '\n' ) ) ;  // Changing the background color according to received data
+	}
+	
 4. Processing laten praten met de Arduino
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
