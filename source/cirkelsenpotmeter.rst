@@ -33,7 +33,7 @@ In Arduino zit ook een ingebouwde seriële plotter, en dat is nog leuker. Met de
 3. Code voor in Processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We kunnen de code in de Arduino hetzelfde laten, maar in Processing gaan nu iets anders tekenen. Kopëer deze code, plak hem in Processing en start het script met de start-knop::
+We kunnen de code in de Arduino hetzelfde laten, maar in Processing gaan we nu iets anders tekenen. Kopëer deze code, plak hem in Processing en start het script met de start-knop::
 
 	import processing.serial.*;    // Importing the serial library to communicate with the Arduino
 

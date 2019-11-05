@@ -94,14 +94,14 @@ Kopiëer deze code en zet hem in het venster van de Arduino IDE (maak dat scherm
 
 Verbind vervolgens de Arduino met de USB-kabel aan je computer, en klik dan op de upload-knop in de IDE (tweede icoon van links).
 
-Als je een foutmelding krijgt omdat de computer niet kan vinden, dan moet je in het menu 'Hulpmiddelen' zorgen dat het juiste bord en de juiste poort zijn geselecteerd. Het bord dat je gebruikt is waarschijnlijk 'Arduino/Genuino Uno' en de poort zou óf iets moeten zijn als COM3 of /dev/cu.wchusbserialfd120 (iets met 'usb' erin).
+Als je een foutmelding krijgt omdat de computer de Arduino niet kan vinden, dan moet je in het menu 'Hulpmiddelen' zorgen dat het juiste bord en de juiste poort zijn geselecteerd. Het bord dat je gebruikt is waarschijnlijk 'Arduino/Genuino Uno' en de poort zou óf iets moeten zijn als COM3 of /dev/cu.wchusbserialfd120 (iets met 'usb' erin).
 
 
 3. Code voor in Processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Het Processing-programma zal de gegevens van de Arduino opvangen uit de seriële verbinding via de USB-poort. De code hieronder zorgt ervoor dat de kleur van het Processing-venster zal veranderen op basis van die gegevens.
-Deze code stuurt ook een 1 of 2 als je met de linker- of rechtermuisknop op het venster klikt.
+Deze code stuurt ook een 0 of 1 als je met de linker- of rechtermuisknop op het venster klikt.
 
 
 Kopiëer deze code en zet hem in Processing::
@@ -123,6 +123,8 @@ Kopiëer deze code en zet hem in Processing::
 
 	void draw() {
 		background ( 150, 50, background_color );   // Initial background color, when we will open the serial window 
+
+        println(background_color); // write the input from the Arduino to the console
 
 		if ( mousePressed  &&  ( mouseButton  ==  LEFT ) ) { // if the left mouse button is pressed
 			myPort.write ( '1' ) ;       // send a '1' to the Arduino IDE
@@ -160,7 +162,7 @@ Start het Processing-script door op de 'Play'-knop te klikken:
 .. image:: imgs/arduinoprocessing4.png
 
 
-Als het goed is, zie je nu een venster dat je van kleur kunt laten veranderen door aan de potentiometer te draaien. De Arduino stuurt een waarde tussen 0 and 255 naar de Processing IDE. De Processing IDE verandert de kleur die je ziet op basis van die waarde.
+Als het goed is, zie je nu een venster dat je van kleur kunt laten veranderen door aan de potentiometer te draaien. De Arduino stuurt een waarde tussen 0 en 255 naar de Processing IDE. De Processing IDE verandert de kleur die je ziet op basis van die waarde.
 
 Probeer ook maar eens om met de linker- en rechtermuisknop op het venster te kliken. Als je alles goed hebt aangesloten, zal het LEDje aan of uitgaan.
 
@@ -172,8 +174,9 @@ Dit is de regel waarmee Processing de kleur van het venster verandert::
     
     background ( 150, 50, background_color );
 
-De functie background() heeft drie getallen nodig: een getal voor hoeveel rood je ziet, hoeveel groen en hoeveel blauw.
-Nu werkt het zo dat alleen blauw verandert als je aan de knop draait. Hoe ziet het eruit als je álle kleuren afhankelijk maakt van de knop?
-
+De functie background() heeft drie getallen nodig: een getal voor hoeveel rood je ziet, hoeveel groen en hoeveel blauw. De hoeveelheid blauw wordt nu bepaald door de draaiknop.
 Kun jij die regel zo veranderen dat je andere kleuren ziet?
+
+Hoe ziet het eruit als je álle kleuren afhankelijk maakt van de knop?
+
 

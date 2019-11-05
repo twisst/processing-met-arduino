@@ -1,0 +1,12 @@
+
+
+plaatje onder 'cirkels tekenen' klopt nog niet met het project dat we daar doen
+
+plaatje schakeling naar beneden
+
+plaatje schakeling in het waterval-deel moet vóór de foto's komen 
+
+Poortentruc verbeteren en ook in eerste script zetten (dus makkelijker maken voor de jonge coder om te zien welke poort ze moeten invullen)
+    //  println("Available serial ports:");
+    //  println(Serial.list());
+    // myPort = new Serial(this, Serial.list()[0], 9600);
