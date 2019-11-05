@@ -123,7 +123,9 @@ Kopiëer deze code en zet hem in Processing::
 
 	void draw() {
 		background ( 150, 50, background_color );   // Initial background color, when we will open the serial window 
-
+		
+		println(background_color);
+		
 		if ( mousePressed  &&  ( mouseButton  ==  LEFT ) ) { // if the left mouse button is pressed
 			myPort.write ( '1' ) ;       // send a '1' to the Arduino IDE
 		} 
